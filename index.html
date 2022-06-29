@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <style>
+        /* CSS */
+        .button-35 {
+          align-items: center;
+          background-color: #fff;
+          border-radius: 12px;
+          box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+          box-sizing: border-box;
+          color: #121212;
+          cursor: pointer;
+          display: inline-flex;
+          flex: 1 1 auto;
+          font-family: Inter,sans-serif;
+          font-size: 1.2rem;
+          font-weight: 700;
+          justify-content: center;
+          line-height: 1;
+          margin: 0;
+          outline: none;
+          padding: 1rem 1.2rem;
+          text-align: center;
+          text-decoration: none;
+          transition: box-shadow .2s,-webkit-box-shadow .2s;
+          white-space: nowrap;
+          border: 0;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+        }
+        
+        .button-35:hover {
+          box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+        }
+        
+        
+        </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
 <h1 style="text-align: center;">Cringe Quotes</h1>
 <p style="text-align: center;"><em>Looking for the cringiest quotes from across the internet?</em></p>
 <p style="text-align: center;">&nbsp;</p>
 <p style="text-align: center;"><em>(More coming!!)</em></p>
 <p>&nbsp;</p>
-<p><em><img style="display: block; margin-left: auto; margin-right: auto;" src="https://imageproxy.ifunny.co/crop:x-20,resize:640x,quality:90x75/images/b75c99e942d976b75ff2d6836a5f3f0a1a93b2496d4b7576dbffcb0d40bcaeb3_1.jpg" alt="" width="380" height="366" /></em></p>
-  
-  
+<button class="button-35" style="display: block; margin-left: auto; margin-right: auto;" role="button" onclick="randomImg1()" ><i class="fa-solid fa-shuffle"></i></button>
+
+<p><em><img id="image" style="display: block; margin-left: auto; margin-right: auto;" src="https://imageproxy.ifunny.co/crop:x-20,resize:640x,quality:90x75/images/b75c99e942d976b75ff2d6836a5f3f0a1a93b2496d4b7576dbffcb0d40bcaeb3_1.jpg" alt="" /></em></p>
+
+<!-- HTML !-->
+<button class="button-35" role="button">Button 35</button>
+
+
+
+
+<script type="text/javascript">
+    function randomImg1() {
+        var myImages1 = new Array();
+        myImages1[1] = "https://imageproxy.ifunny.co/crop:x-20,resize:640x,quality:90x75/images/b75c99e942d976b75ff2d6836a5f3f0a1a93b2496d4b7576dbffcb0d40bcaeb3_1.jpg";
+        myImages1[2] = "https://www.azquotes.com/picture-quotes/quote-learn-the-rules-like-a-pro-so-you-can-break-them-like-an-artist-pablo-picasso-48-14-73.jpg";
+        myImages1[3] = "https://i.pinimg.com/736x/ba/db/a2/badba298869c9df50aeb95335088dc98.jpg";
+        var rnd = Math.floor(Math.random() * myImages1.length);
+        if (rnd == 0) {
+                rnd = 1;
+        }
+        console.log(rnd)
+        document.getElementById("image").src = myImages1[rnd];
+    }
+    </script>
+    </body>
 </html>
